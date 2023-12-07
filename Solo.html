@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .total {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(0, 0, 0);
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url(./images/8d008ba1-6360-47c5-a14a-d98c8437e5bb.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        html,
+        .total {
+            height: 100%;
+            margin: 0;
+        }
+
+        .total::before {
+            content: "";
+            display: block;
+            height: 100%;
+        }
+
+        .box {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .title {
+            background-color: rgba(0, 0, 0, 0);
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            padding: 10px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        .btn1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 30px;
+            border: none;
+            border-radius: 18px;
+            font-size: 17px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        .title2 {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 50%;
+            margin: auto;
+        }
+
+        .title4 {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin: auto;
+        }
+
+        .cc {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .cavr {
+            border-radius: 20px;
+            width: 86%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: rgb(255, 255, 255);
+        }
+
+        .doc {
+            border: 2px solid rgb(255, 255, 255);
+            color: white;
+            text-align: end;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .chap {
+            border: 2px solid rgb(255, 255, 255);
+            color: white;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .bov {
+            background-image: linear-gradient(90deg, rgb(4, 0, 255), rgb(27, 151, 145));
+            color: white;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            margin: 4px;
+            cursor: pointer;
+            user-select: none;
+            font-weight: 700;
+        }
+
+        .bov:hover {
+            background-image: linear-gradient(90deg, rgb(13, 9, 235), rgb(34, 197, 189));
+            color: rgb(255, 255, 255);
+            transform: scale(0.95);
+            all: 1s;
+        }
+
+        .mune {
+            height: 33px;
+            width: 33px;
+        }
+
+        #mune2 {
+            height: 48px;
+            width: 48px;
+            margin: 3px;
+        }
+
+        .hhh {
+            background-color: rgba(24, 22, 22, 0.781);
+            color: white;
+            font-size: 20px;
+            width: 70%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 0;
+            position: fixed;
+        }
+
+        .fff {
+            border: 3px solid white;
+            width: 70%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-left: 15%;
+            cursor: pointer;
+            user-select: none;
+            margin-top: 10px;
+        }
+
+        .fff:hover {
+            border: 3px solid rgb(27, 151, 145);
+            color: rgb(27, 151, 145);
+        }
+
+        #menu3 {
+            display: none;
+        }
+
+        #mune2 {
+            display: none;
+        }
+
+        h4 {
+            margin-top: 10px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .dff {
+            text-decoration: none;
+            color: white;
+        }
+
+        .ret {
+            background-image: linear-gradient(90deg, rgb(4, 0, 255), rgb(27, 151, 145));
+            width: 180px;
+            height: 34px;
+            border-radius: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: white;
+            padding: 5px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .kal {
+            width: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .hhh2 {
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            font-size: 20px;
+            width: 30%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            top: 0;
+            position: fixed;
+            z-index: 3;
+        }
+
+        #menu33 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="total" id="total">
+        <div class="title">
+            <div class="mune" id="mune1"><img src="./images/56763.png" alt=""></div>
+            <div class="fd"></div>
+            <div class="btn111"><img class="title4" src="images/dra.jpg" alt=""></div>
+        </div>
+        <div class="hhh" id="menu3">
+            <div class="mune" id="mune2"><img src="./images/img.icons8.png" alt=""></div>
+            <div class="title2"><img class="title2" src="images/b02d7237-1803-45d3-978e-4835a59863ee.jpg" alt=""></div>
+            <h4>POWER MANGA</h4>
+            <div class="fff" id="ggh"><a href="./Login.html">Login</a></div>
+            <div class="fff"><a href="./myManga.html">My Manga</a></div>
+            <div class="fff"><a href="./topManga.html">Top Manga</a></div>
+        </div>
+        <div class="hhh2" id="menu33"></div>
+        <div class="box">
+            <div class="cc">
+                <div class="ret">
+                    <img src="./images/img.icons8.png" alt="" class="kal">
+                    <a href="./index.html">
+                        <p class="pp">الرجوع الى القائمة</p>
+                    </a>
+                </div>
+                <div class="cavr">
+                    <h1 id="h1">Solo Leveling</h1>
+                    <img class="cavr"
+                        src="./images/MV5BMDM3M2YwZjgtM2JjYi00MGY1LWE4MjMtOWZkOGNkNDA0ZDAwXkEyXkFqcGdeQXVyMTEwNDU1MzEy._V1_.jpg"
+                        alt="">
+                </div>
+                <div class="doc">
+                    <h3>:القصة</h3>
+                    <p>اسمي سونغ جين وو ، صياد من الرتبة الإلكترونية. أنا شخص محاط بخطر مميت حتى في أضعف زنزانة ، “أضعف
+                        صياد في العالم”. لم يكن لدي أي مهارات على الإطلاق لعرضها ، حتى وجدت أصعب زنزانة من الرتبة د
+                        مخبأة في الداخل</p>
+                </div>
+                <div class="chap">
+                    <h2>الفصول</h2>
+                    <div class="bov"><a href="./chaptre1Solo.html" class="dff">الفصل 1</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var mune1 = document.getElementById("mune1")
+        let mune2 = document.getElementById("mune2");
+        let menu3 = document.getElementById("menu3");
+        let menu33 = document.getElementById("menu33");
+
+        mune1.onclick = function () {
+            menu3.style.display = "block";
+            menu33.style.display = "block";
+            mune1.style.display = "none";
+            mune2.style.display = "block";
+        }
+        mune2.onclick = function () {
+            menu3.style.display = "none";
+            menu33.style.display = "none";
+            mune1.style.display = "block";
+            mune2.style.display = "none";
+        }
+        menu33.onclick = function () {
+            menu3.style.display = "none";
+            menu33.style.display = "none";
+            mune1.style.display = "block";
+            mune2.style.display = "none";
+        }
+
+
+    </script>
+</body>
+
+</html>
